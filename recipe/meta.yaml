@@ -1,4 +1,4 @@
-{% set version = '0.2.1' %}
+{% set version = '0.3' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,12 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/densityClust_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/densityClust/densityClust_{{ version }}.tar.gz
-  sha256: 701d6053415552d8267be7ad3d02003506ccd758e764a887672b1cd00d34982e
+  sha256: 23749ba57d1d7886e0fe9ba535d7f30dd2cbb7ebf451afcec8f54be5d4063eff
 
 build:
   number: 0
   skip: true  # [win32]
+
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,13 +25,26 @@ build:
 requirements:
   build:
     - r-base
+    - r-fnn
+    - r-rcolorbrewer
     - r-rcpp
+    - r-rtsne
+    - r-ggplot2
+    - r-ggrepel
+    - r-gridextra
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
+
   run:
     - r-base
+    - r-fnn
+    - r-rcolorbrewer
     - r-rcpp
+    - r-rtsne
+    - r-ggplot2
+    - r-ggrepel
+    - r-gridextra
     - libgcc  # [not win]
 
 test:
@@ -41,11 +55,18 @@ test:
 about:
   home: https://CRAN.R-project.org/package=densityClust
   license: GPL (>= 2)
-  summary: An implementation of the clustering algorithm described by Alex Rodriguez and Alessandro
-    Laio (Science, 2014 vol. 344), along with tools to inspect and visualize the results.
+  summary: An improved implementation (based on k-nearest neighbors) of the  density peak clustering
+    algorithm, originally described by Alex Rodriguez  and Alessandro Laio (Science,
+    2014 vol. 344). It can handle large datasets (> 100, 000 samples) very efficiently.
+    It was initially implemented by  Thomas Lin Pedersen, with inputs from Sean Hughes
+    and later improved by  Xiaojie Qiu to handle large datasets with kNNs.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak

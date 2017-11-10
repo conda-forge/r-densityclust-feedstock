@@ -7,7 +7,7 @@ Package license: GPL (>= 2)
 
 Feedstock license: BSD 3-Clause
 
-Summary: An implementation of the clustering algorithm described by Alex Rodriguez and Alessandro Laio (Science, 2014 vol. 344), along with tools to inspect and visualize the results.
+Summary: An improved implementation (based on k-nearest neighbors) of the  density peak clustering algorithm, originally described by Alex Rodriguez  and Alessandro Laio (Science, 2014 vol. 344). It can handle large datasets (> 100, 000 samples) very efficiently. It was initially implemented by  Thomas Lin Pedersen, with inputs from Sean Hughes and later improved by  Xiaojie Qiu to handle large datasets with kNNs.
 
 
 
@@ -66,6 +66,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
