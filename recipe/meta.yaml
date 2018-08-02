@@ -15,7 +15,8 @@ source:
   sha256: 23749ba57d1d7886e0fe9ba535d7f30dd2cbb7ebf451afcec8f54be5d4063eff
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
 
   rpaths:
@@ -24,6 +25,12 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+  host:
     - r-base
     - r-fnn
     - r-rcolorbrewer
@@ -32,9 +39,6 @@ requirements:
     - r-ggplot2
     - r-ggrepel
     - r-gridextra
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
@@ -45,7 +49,6 @@ requirements:
     - r-ggplot2
     - r-ggrepel
     - r-gridextra
-    - libgcc  # [not win]
 
 test:
   commands:
