@@ -10,13 +10,13 @@ package:
 source:
   fn: densityClust_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/densityClust_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/densityClust/densityClust_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/densityClust_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/densityClust/densityClust_{{ version }}.tar.gz
   sha256: 23749ba57d1d7886e0fe9ba535d7f30dd2cbb7ebf451afcec8f54be5d4063eff
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 2
   skip: true  # [win32]
 
   rpaths:
@@ -52,7 +52,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('densityClust')"  # [not win]
+    - $R -e "library('densityClust')"           # [not win]
     - "\"%R%\" -e \"library('densityClust')\""  # [win]
 
 about:
