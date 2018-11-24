@@ -14,9 +14,9 @@ Summary: An improved implementation (based on k-nearest neighbors) of the  densi
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/nsoranzo_r-densityclust-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/nsoranzo_r-densityclust-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/nsoranzo_r-densityclust-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/nsoranzo_r-densityclust-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/nsoranzo_r-densityclust-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/nsoranzo-r-densityclust-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-densityclust-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-densityclust-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-densityclust-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-densityclust-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-densityclust-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-densityclust-feedstock/branch/master)
 
 Current release info
 ====================
