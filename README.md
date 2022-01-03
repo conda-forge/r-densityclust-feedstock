@@ -3,11 +3,11 @@ About r-densityclust
 
 Home: https://CRAN.R-project.org/package=densityClust
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-densityclust-feedstock/blob/master/LICENSE.txt)
 
-Summary: An improved implementation (based on k-nearest neighbors) of the  density peak clustering algorithm, originally described by Alex Rodriguez  and Alessandro Laio (Science, 2014 vol. 344). It can handle large datasets (> 100, 000 samples) very efficiently. It was initially implemented by  Thomas Lin Pedersen, with inputs from Sean Hughes and later improved by  Xiaojie Qiu to handle large datasets with kNNs.
+Summary: An improved implementation (based on k-nearest neighbors) of the density peak clustering algorithm, originally described by Alex Rodriguez and Alessandro Laio (Science, 2014 vol. 344). It can handle large datasets (> 100, 000 samples) very efficiently. It was initially implemented by Thomas Lin Pedersen, with inputs from Sean Hughes and later improved by Xiaojie Qiu to handle large datasets with kNNs.
 
 Current build status
 ====================
@@ -109,7 +109,8 @@ conda search r-densityclust --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -169,9 +170,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 
