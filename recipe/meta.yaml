@@ -37,7 +37,7 @@ requirements:
     - r-base
     - r-fnn
     - r-rcolorbrewer
-    - r-rcpp <1.0.7
+    - r-rcpp
     - r-rtsne
     - r-ggplot2
     - r-ggrepel
@@ -47,7 +47,7 @@ requirements:
     - {{ native }}gcc-libs         # [win]
     - r-fnn
     - r-rcolorbrewer
-    - r-rcpp <1.0.7
+    - r-rcpp
     - r-rtsne
     - r-ggplot2
     - r-ggrepel
