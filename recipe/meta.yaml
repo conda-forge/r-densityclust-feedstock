@@ -11,10 +11,12 @@ source:
     - {{ cran_mirror }}/src/contrib/densityClust_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/densityClust/densityClust_{{ version }}.tar.gz
   sha256: 23749ba57d1d7886e0fe9ba535d7f30dd2cbb7ebf451afcec8f54be5d4063eff
+  patches:
+    - patch
 
 build:
   merge_build_host: True  # [win]
-  number: 1005
+  number: 1006
   rpaths:
     - lib/R/lib/
     - lib/
@@ -35,7 +37,7 @@ requirements:
     - r-base
     - r-fnn
     - r-rcolorbrewer
-    - r-rcpp
+    - r-rcpp <1.0.7
     - r-rtsne
     - r-ggplot2
     - r-ggrepel
@@ -45,7 +47,7 @@ requirements:
     - {{ native }}gcc-libs         # [win]
     - r-fnn
     - r-rcolorbrewer
-    - r-rcpp
+    - r-rcpp <1.0.7
     - r-rtsne
     - r-ggplot2
     - r-ggrepel
