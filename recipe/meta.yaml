@@ -12,7 +12,7 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/densityClust/densityClust_{{ version }}.tar.gz
   sha256: 23749ba57d1d7886e0fe9ba535d7f30dd2cbb7ebf451afcec8f54be5d4063eff
   patches:
-    - patch
+    - patch  # [not win]
 
 build:
   merge_build_host: True  # [win]
