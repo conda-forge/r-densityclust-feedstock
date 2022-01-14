@@ -1,0 +1,37 @@
+diff --git a/src/findDistValueByRowColInd.cpp b/src/findDistValueByRowColInd.cpp
+index 4bc8bd8..0fb409a 100644
+--- a/src/findDistValueByRowColInd.cpp
++++ b/src/findDistValueByRowColInd.cpp
+@@ -17,10 +17,6 @@ NumericVector findDistValueByRowColInd(NumericVector distance, int num_row, Nume
+   int col_inds_len = col_inds.size();
+   NumericVector res(row_inds_len * col_inds_len);
+   
+-  // Rcout << "distance is " << distance  << "col_inds index is " << col_inds << std::endl; 
+-  // Rcout << "row_inds is " << row_inds  << "col_inds index is " << col_inds << std::endl;
+-  // Rcout << "col_inds_len is " << col_inds_len  << "col_inds_len index is " << col_inds_len  << "res length is " << res.size() << std::endl;
+-  
+   int i = 0;
+   int dist_ind; 
+   
+@@ -28,7 +24,6 @@ NumericVector findDistValueByRowColInd(NumericVector distance, int num_row, Nume
+     int row_ind = row_inds[row];
+     for (int col = 0; col < col_inds_len; col++) {
+       int col_ind = col_inds[col];
+-      // Rcout << "col is " << col  << "row is " << row << std::endl;
+       
+       if(row_ind == col_ind){
+         res[i] = 0;
+@@ -47,12 +42,7 @@ NumericVector findDistValueByRowColInd(NumericVector distance, int num_row, Nume
+           row_ind_new = row_ind;
+           col_ind_new = col_ind;          
+         }
+-        dist_ind = num_row * (col_ind_new - 1) + row_ind_new - 0.5 * (1 + col_ind_new) * col_ind_new - 1;
+-        // if(row_ind == 3 && col_ind == 2){
+-        // Rcout << "num_row * (col_ind_new - 1) is " << num_row * (col_ind_new - 1)  << " 1/2 * (1 + col_ind_new) * col_ind_new is " << 0.5 * (1 + 1) * col_ind_new  << " num_row is " << num_row << " dist_ind is " << num_row * (col_ind_new - 1) + row_ind_new - 1/2 * (1 + col_ind_new) * col_ind_new - 1 << std::endl;
+-        
+-        // Rcout << "col_ind_new is " << col_ind_new  << " row_ind_new index is " << row_ind_new  << " num_row is " << num_row << " dist_ind is " << dist_ind << " distance under the current index " << distance[dist_ind] << std::endl;
+-        // }
++        dist_ind = ((unsigned long long) num_row) * (col_ind_new - 1) + row_ind_new - 0.5 * (1 + col_ind_new) * (unsigned long long) col_ind_new - 1;
+         res[i] = distance[dist_ind]; 
+       }
+       i++; 
