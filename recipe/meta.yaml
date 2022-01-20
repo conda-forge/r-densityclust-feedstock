@@ -11,10 +11,12 @@ source:
     - {{ cran_mirror }}/src/contrib/densityClust_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/densityClust/densityClust_{{ version }}.tar.gz
   sha256: 23749ba57d1d7886e0fe9ba535d7f30dd2cbb7ebf451afcec8f54be5d4063eff
+  patches:
+    - patch  # [not win]
 
 build:
   merge_build_host: True  # [win]
-  number: 1005
+  number: 1006
   rpaths:
     - lib/R/lib/
     - lib/
@@ -30,6 +32,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - {{ posix }}patch
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
