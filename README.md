@@ -7,7 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-densityclust-
 About r-densityclust
 --------------------
 
-Home: https://CRAN.R-project.org/package=densityClust
+Home: https://github.com/thomasp85/densityClust
 
 Package license: GPL-2.0-or-later
 
@@ -16,7 +16,7 @@ Summary: An improved implementation (based on k-nearest neighbors) of the densit
 About r-densityclust
 --------------------
 
-Home: https://CRAN.R-project.org/package=densityClust
+Home: https://github.com/thomasp85/densityClust
 
 Package license: GPL-2.0-or-later
 
