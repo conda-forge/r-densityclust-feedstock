@@ -3,18 +3,20 @@ About r-densityclust-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-densityclust-feedstock/blob/main/LICENSE.txt)
 
+
 About r-densityclust
 --------------------
 
-Home: https://CRAN.R-project.org/package=densityClust
+Home: https://github.com/thomasp85/densityClust
 
 Package license: GPL-2.0-or-later
 
 Summary: An improved implementation (based on k-nearest neighbors) of the density peak clustering algorithm, originally described by Alex Rodriguez and Alessandro Laio (Science, 2014 vol. 344). It can handle large datasets (> 100, 000 samples) very efficiently. It was initially implemented by Thomas Lin Pedersen, with inputs from Sean Hughes and later improved by Xiaojie Qiu to handle large datasets with kNNs.
+
 About r-densityclust
 --------------------
 
-Home: https://CRAN.R-project.org/package=densityClust
+Home: https://github.com/thomasp85/densityClust
 
 Package license: GPL-2.0-or-later
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
